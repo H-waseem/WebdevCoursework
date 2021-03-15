@@ -1,0 +1,546 @@
+/*
+*    Title: Lab 06 Sample Solution
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: Used as a base template for own submission making several amendments to fit the coursework requirements
+*    Changes: Changed several colour schemes to fit own brand style, adding colour and some minor changes
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #888;
+    line-height: 30px;
+    text-align: center;
+}
+
+strong {
+    font-weight: 600;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+a {
+    color: rgba(51, 51, 51);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+a:hover,
+a:focus {
+    color: #ffffff;
+    border: 0;
+    text-decoration: none;
+}
+
+h1,
+
+h2 {
+    margin-top: 10px;
+    font-size: 38px;
+    font-weight: 900;
+    color: rgb(124, 249, 220);
+    line-height: 50px;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke: black;
+    font-style: italic;
+
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 300;
+    color: rgb(124, 249, 220);
+    line-height: 30px;
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+}
+
+.medium-paragraph {
+    font-size: 17px;
+    line-height: 32px;
+}
+
+::-moz-selection {
+    background: #8542a0;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #8542a0;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/***** General style, all sections *****/
+
+.section-container {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    background: rgba(45, 45, 45);
+    color: rgb(124, 249, 220);
+}
+
+.section-container-gray-bg {
+    background: rgba(40, 40, 40);
+}
+
+.section-container-image-bg,
+.section-container-image-bg h2,
+.section-container-image-bg h3 {
+    color: #fff;
+}
+
+.section-container-image-bg .divider-1 span {
+    border-color: #fff;
+}
+
+.section-description {
+    margin-top: 60px;
+    padding-bottom: 10px;
+    color: rgb(124, 249, 220);
+    font-weight: 900;
+}
+
+.section-description p {
+    margin-top: 20px;
+    padding: 0 120px;
+}
+
+.section-container-image-bg .section-description p {
+    opacity: 0.8;
+}
+
+.section-bottom-button {
+    padding-top: 60px;
+}
+
+
+/***** Divider *****/
+
+.divider-1 span {
+    display: inline-block;
+    width: 200px;
+    border-bottom: 1px dotted #aaa;
+}
+
+
+/***** Top menu *****/
+
+.navbar {
+    background: hsla(180, 36%, 35%, 0.6);
+    transition: all .6s;
+    backface-visibility: hidden;
+    box-shadow: 0 2px 5px 1px rgba(51, 51, 51, 0.5);
+}
+
+.navbar-dark .navbar-nav {
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: hsla(0, 0%, 0%, 0);
+}
+
+.navbar-dark .navbar-toggler:focus {
+    background: none;
+    outline: 0;
+}
+
+.navbar-dark .navbar-toggler span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 6px auto;
+    background: #fff;
+    transition: all .6s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+
+.navbar-dark .navbar-toggler:hover span,
+.navbar-dark .navbar-toggler:focus span {
+    background: #ccc;
+}
+
+/* rotate first span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:first-of-type {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+/* hide second span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-of-type(2) {
+    opacity: 0;
+}
+
+/* rotate third span */
+.navbar-dark .navbar-toggler[aria-expanded="true"] span:last-of-type {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar-dark .navbar-toggler[aria-expanded="false"] span {
+    transform: none;
+    opacity: 1;
+}
+
+.navbar-brand {
+    width: 162px;
+    height: 44px;
+    background: url(../img/logo.png) left center no-repeat;
+    border: 0;
+    text-indent: -99999px;
+}
+
+
+/***** Top content *****/
+
+.top-content {
+    width: 100%;
+    padding: 100px 0 120px 0;
+}
+
+.top-content h1 {
+    padding-top: 60px;
+    color: #fff;
+}
+
+.top-content .description {
+    margin: 30px 0 0 0;
+    padding-bottom: 30px;
+}
+
+.top-content .description p {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.top-content .description a {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.top-content .description a:hover,
+.top-content .description a:focus {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/***** Section 1 *****/
+
+.section-1-box {
+    padding-top: 30px;
+    text-align: left;
+}
+
+.section-1-box .section-1-box-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: rgb(124, 249, 220);
+    font-size: 40px;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -o-transition: all .6s;
+    -moz-transition: all .6s;
+    -webkit-transition: all .6s;
+    -ms-transition: all .6s;
+    transition: all .6s;
+}
+
+.section-1-box h3 {
+    margin-top: 0;
+    padding: 0 0 10px 0;
+}
+
+
+/***** Section 2 *****/
+
+.section-2-box {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.section-2-box h3 {
+    margin-top: 0;
+}
+
+.section-2-box-text .medium-paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/***** Section 3 *****/
+
+.section-3-box {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.section-3-box .section-3-box-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background: rgb(124, 249, 220);
+    font-size: 28px;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.section-3-box h3 {
+    margin-top: 0;
+    padding: 0 0 10px 0;
+}
+
+
+/***** Footer *****/
+
+footer {
+    padding: 40px 0;
+    background-color: rgb(124, 249, 220);
+    color: rgb(40, 40, 40);
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=number],
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.gender,
+#tactick {
+    width: 100%;
+    display: inline;
+    position: relative;
+    padding: 0 15px 0 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1em;
+    line-height: 1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/*Input validation styling for the form*/
+
+main .contact-us .reg-log-form {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    padding: 45px;
+    /* register and login buttons */
+    /* the form that takes in data */
+}
+
+main .contact-us .reg-log-form .form-text h3 {
+    font-size: 30px;
+    /* set font size */
+    color: #b4becb;
+}
+
+main .contact-us .reg-log-form .form-text p {
+    margin: 5px 0px;
+}
+
+main .contact-us .reg-log-form .reg-log-btn {
+    margin: 40px 0px 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* apply login button styles*/
+    /* on hover, decrease opacity and increase border-radius */
+    /* on hover, change colour */
+    /* apply styles to both buttons */
+    /* remove outline when button receives focus */
+}
+
+main #register-form .registerbtn #regBtn {
+    background-color: #eeeeee;
+    /* light grey colour */
+    cursor: pointer;
+    /* on hover, change cursor */
+}
+
+main #login-form .loginbtn #logBtn {
+    background: #fff;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+main #login-form .loginbtn #logBtn:hover {
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
+main #register-form .registerbtn #regBtn:hover {
+    color: #fff;
+    background-color: #b4becb;
+}
+
+main #register-form .registerbtn button {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 16px;
+    width: 47%;
+}
+
+main #register-form .registerbtn button:focus {
+    outline: 0;
+}
+
+main form .fields {
+    border: none;
+    /* attribute selector, i means insensitive letter casing */
+    /* on hover decrease opacity */
+    /* apply to all inputs */
+    /* remove outline when focusing */
+}
+
+main form .fields .input-type-1 {
+    position: relative;
+    /* encase absolute elements */
+    padding-bottom: 10px;
+}
+
+main form .fields .input-type-1 input {
+    width: 100%;
+    /* maximise width */
+    border-radius: 5px;
+}
+
+main form .fields .input-type-1 small {
+    position: relative;
+    /* freely control positioning of error message */
+    bottom: 0;
+    left: 0;
+    color: #8542a0;
+    /* to show it is an error, set color to red */
+    display: none;
+    /* do not display message until JS says so */
+}
+
+main form .fields input[type="submit"i] {
+    /* sapply styles to submit button */
+    background: #ffbfc3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+main form .fields input[type="submit"i]:hover {
+    opacity: 0.75;
+}
+
+main form .fields input {
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid gainsboro;
+    background: #fff;
+}
+
+main form .fields input:focus {
+    outline: 0;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn,
+.loginbtn {
+    background-color: cadetblue;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover,
+loginbtn:hover {
+    opacity: 1;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+i {
+    margin-right: 5%;
+}
