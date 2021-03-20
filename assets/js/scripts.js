@@ -26,6 +26,7 @@ jQuery(document).ready(function() {
         Background slideshow
     */
 	$('.top-content').backstretch("assets/img/backgrounds/Countertop.jpg");
+	$('.top-content-about').backstretch("assets/img/backgrounds/Houses.jpg");
     $('.section-4-container').backstretch("assets/img/backgrounds/key.jpg");
     
     /*
