@@ -1,3 +1,12 @@
+/*
+*    Title: Lab 06 Sample Solution (media-queries.css)
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: Used along side the template
+*    Changes: very minor to no changes
+*/
+
 
 @media (min-width: 992px) and (max-width: 1199px) {
 	

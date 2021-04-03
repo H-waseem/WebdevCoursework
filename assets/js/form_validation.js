@@ -1,3 +1,12 @@
+/*
+*    Title: IN1010 Lab 06 Sample Solution (form_validation.js)
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: Used for form validation in contact page
+*    Changes: minor changes to no changes
+*/
+
 // target elements from the DOM using this function
 function $(id) {
     return document.getElementById(id);

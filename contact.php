@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
 
+<!--
+*    Title: IN1010 Lab 06 Sample Solution (login.html)
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: Used as a base template for own submission making several amendments to fit the coursework requirements
+*    Changes: added the requirements highlighted in the brief such as having social media links in the footer and various changes to conform to the specification and brand
+
+-->
+
 <head>
 
     <!-- Required meta tags -->
@@ -9,14 +19,18 @@
 
     <title>Houzer - Contact</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CSS sheets online -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600"> <!-- From City lab 6 example so not sure about official citings for this page -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> <!-- From lab 6 however original page on source is here: https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> <!-- Again from City lab 6 example so not sure about official citings for this page -->
+    
+    <!-- Style sheets in files -->
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media-queries.css">
-    <link rel="icon" type="image/png" href="assets/img/LogoMini.png"> <!--Adds a "Favicon" (Image top left of tab)-->
+
+    <link rel="icon" type="image/png" href="assets/img/LogoMini.png"> <!--Comment: adds a "Favicon" (Image top left of tab)-->
+
 </head>
 
 <body>
@@ -24,7 +38,7 @@
     <!-- Menu -->
     <nav class="navbar navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="home.html">Houzer</a>
+            <a class="navbar-brand" href="index.php">Houzer</a>
 
             <!-- Burger menu -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,13 +51,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +72,7 @@
                 <div class="col section-1 section-description wow fadeIn">
                     <h1 style="margin-top: 3em">Create an account</h1>
                     <div class="divider-1 wow fadeInUp"><span></span></div>
-                    <p class="medium paragraph">Please <a href="#login-form">log in</a> with your details to leave a comment.</p>
+                    <p class="medium paragraph">Please <a href="#login-form">log in</a> with your details to book an appointment.</p>
                     <p>If you have not yet created an account with us, please fill out the <a href="#register-form">registration</a> form instead.</p>
                 </div>
             </div>
@@ -71,7 +85,7 @@
             <div class="row">
                 <!-- Login form -->
                 <div class="col-md-6 section-3-box wow fadeInLeft">
-                    <form method="post" action="#" id="login-form">
+                    <form method="post" action="login.php" id="login-form">
                         <div class="container">
                             <fieldset class="fields" id="fieldset2">
                                 <h2>Login</h2>
@@ -97,9 +111,10 @@
                         </div>
                     </form>
                 </div>
+
                 <!-- Registration form -->
                 <div class="col-md-6 section-3-box wow fadeInLeft">
-                    <form method="post" action="#" id="register-form">
+                    <form method="post" action="register.php" id="register-form">
                         <div class="container">
                             <fieldset class="fields" id="fieldset1">
                                 <h2>Register</h2>
@@ -221,12 +236,17 @@
     </footer>
 
     <!-- Javascript -->
+    <!-- JQuerry scripts (template from lab 6) -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.backstretch.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <!-- Not sure about original source but i aqquired it from Lab 6 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> <!-- Bootstrap 4.4: https://getbootstrap.com/docs/4.4/getting-started/introduction/-->
+    
+    <script src="assets/js/wow.min.js"></script><!-- Not sure about original source but i aqquired it from Lab 6 -->
+
     <script src="assets/js/scripts.js"></script>
+    
     <script src="assets/js/form_validation.js"></script> <!-- validation for the form -->
 </body></html>

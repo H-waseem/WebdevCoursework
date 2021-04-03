@@ -1,3 +1,13 @@
+/*
+*    Title: IN1010 Lab 06 Sample Solution (jquery.backstretch.js)
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: for backstretches on pages
+*    Changes: no changes
+*/
+
+
 /*! Backstretch - v2.0.4 - 2013-06-19
 * http://srobbin.com/jquery-plugins/backstretch/
 * Copyright (c) 2013 Scott Robbin; Licensed MIT */

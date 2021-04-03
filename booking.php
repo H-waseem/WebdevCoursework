@@ -8,43 +8,25 @@
 *    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
 *    Usage: Used as a base template for own submission making several amendments to fit the coursework requirements
 *    Changes: added the requirements highlighted in the brief such as having social media links in the footer and various changes to conform to the specification and brand
-
-==================================================================================================
-
-Image sources in assets/img/images folder: 
-*    exterior-1: https://www.pexels.com/photo/blue-and-gray-concrete-house-with-attic-during-twilight-186077/
-*    exterior-2: https://www.pexels.com/photo/architecture-clouds-daylight-driveway-259588/
-*    
-*    interior-1: https://www.pexels.com/photo/white-couch-near-black-mat-259962/
-*    interior-2: https://www.pexels.com/photo/white-wooden-cupboards-2724749/
-*    interior-3: https://www.pexels.com/photo/four-brown-wooden-chairs-2635038/
-
-==================================================================================================
-
-Image sources in assets/img/backgrounds folder:
-*    Countertop: https://www.pexels.com/photo/spacious-kitchen-in-modern-apartment-6207945/
-*    Houses: https://www.pexels.com/photo/photo-of-houses-under-starry-skies-977739/ 
-
-=================================================================================================
-
-Image sources assets/img :
-*   Twitter-Logo: https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1.png
-*   Instagram-Logo: https://www.freepnglogos.com/images/instagram-logo-png-2428.html
-*   Facebook-Logo: https://1000logos.net/facebook-logo/
-
-*   logo: Made using online photo editor so my own work
-*   logo@2x: Made using online photo editor so my own work
-*   LogoMini: Made using online photo editor so my own work
-
 -->
+
+<!--
+*    Title: Modern Calendar Date Picker In Vanilla JavaScript
+*    Author: MathiasWP
+*    Date: 2020
+*    Availability: https://www.cssscript.com/calendar-date-picke/
+*    Usage: Used for calander functionallity
+*    Changes: changed background and general changes to fit website
+-->
+
 
 <head>
 
-    <!-- Required meta tags -->
+    <!--Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Houzer - About us</title>
+    <title>Houzer - Booking</title>
 
     <!-- CSS sheets online -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600"> <!-- From City lab 6 example so not sure about official citings for this page -->
@@ -56,25 +38,40 @@ Image sources assets/img :
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media-queries.css">
 
-    <link rel="icon" type="image/png" href="assets/img/LogoMini.png"> <!--Comment: adds a "Favicon" (Image top left of tab)-->
+    <link rel="icon" type="image/png" href="assets/img/LogoMini.png"> <!--Adds a "Favicon" (Image top left of tab)-->
 
+    <link rel="stylesheet" href="assets/css/CalendarPicker.style.css"> <!-- Calender: https://www.cssscript.com/calendar-date-picke/-->
+
+    <style>
+
+    #myCalendarWrapper {
+        width: 40em;
+        border: 1px dashed black;
+        padding: 2em 4em;
+        position: relative;
+        font-size: 1rem;
+        margin: 2rem auto 5rem;
+        background-color: rgb(124, 249, 220);
+    }
+    </style>
+    
 </head>
 
 <body>
 
-    <!-- Menu (Header for all pages)-->
+    <!-- Menu -->
     <nav class="navbar navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">Houzer</a>
 
-            <!-- Burger menu (template from Lab 6)-->
+            <!-- Burger menu -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <!-- Text menu (template from Lab 6)-->
+            <!-- Text menu (added logout and booking) -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -86,78 +83,68 @@ Image sources assets/img :
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.php">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Top content (template from Lab 6)-->
-    <div class="top-content-about">
-        <div class="container">
-            <!-- Title and description row -->
-            <div class="row">
-                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                    <h1>About Houzer - What we do</h1>
-                    <div class="description">
-                        <p>
-                            Our main goal is to provide the utmost streamline experience of renting, selling and buying properties. We also provide renovation and ineterior designing services
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- End title and description row -->
-        </div>
-    </div>
-
-    <!-- Description (template from Lab 6)-->
+    <!-- Description -->
     <div class="section-1-container section-container">
         <div class="container">
             <div class="row">
                 <div class="col section-1 section-description wow fadeIn">
-                    <h2>Description</h2>
+                    <h2>Book a appointment with the Houzer team</h2>
                     <div class="divider-1 wow fadeInUp"><span></span></div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 section-1-box wow fadeInUp">
                     <p class="medium-paragraph">
-                        Houzer is built upon the foundation of user experience hence our services are of the highest calibre, our renovation services was used to build the Hyperbolic time chamber. We have also built the village hidden in the leaves as part of one of our contracts. Our greatest feat was rebuilding the leaf village after a terrible incedent wiped its infastructure. We have also converted a pineaple house for underwater vacations.
+                        Use the calander below to select a date and time for a suitable appointment time for your meeting with Houzer estate agents and get a evaluation for your property
                     </p>
-                </div>
-                <div class="col-md-12 section-1-box wow fadeInRight">
-                    <img src="assets/img/images/exterior-2.jpg">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Related Photos (template from Lab 6 but changed images)-->
-    <div class="section-2-container section-container section-container-gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col section-2 section-description wow fadeIn">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col section-2-box wow fadeInLeft">
-                    <h3>Some of our work:</h3>
-                    <div class="row">
-                        <div class="column">
-                            <img src="assets/img/images/interior-1.jpg">
-                        </div>
-                        <div class="column">
-                            <img src="assets/img/images/interior-2.jpg">
-                        </div>
-                        <div class="column">
-                            <img src="assets/img/images/interior-3.jpg">
-                        </div>
+
+    <div id="myCalendarWrapper"></div> <!-- Creates the calander -->
+
+    <!-- Appointment submission (used some refactored code from register.php) -->
+    <div class="col-md-12 section-3-box wow fadeInLeft">
+        <form method="post" action="appointmentSubmit.php" id="Time-submission">
+            <div class="container">
+                <fieldset class="fields" id="fieldset1">
+
+                    <div class="input-type-1">
+                        <!-- Enter time -->
+                        <label for="time"><b>Time (in 24 hours example: 1400)</b></label>
+                        <input type="number" placeholder="Enter Time" name="time" id="time" maxlength="4">
+                        <small id="timeTag"></small> 
                     </div>
-                </div>
+
+                    <div class="input-type-1">
+                        <!-- Enter time -->
+                        <label for="date"><b>Date (Select from calander)</b></label>
+                        <input type="text" placeholder="Enter date" name="current-datestring" id="current-datestring" maxlength="20">
+                    </div>
+
+                    <div class="input-type-1">
+                        <button type="submit" class="registerbtn" id="regBtn">Book appointment</button>
+                    </div>
+
+                </fieldset>
             </div>
-        </div>
+        </form>
     </div>
         
-    <!-- Footer (template from Lab 6)-->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -169,7 +156,6 @@ Image sources assets/img :
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Follow us on Social Media</h5>
                     <ul class="list-unstyled mb-0">
-                        <!-- Added images and links for social media -->
                         <div>
                             <a href="https://www.facebook.com/"> 
                                 <img src="assets/img/Facebook-logo.png" alt="Facebook" style="width:40px;height:40px;">
@@ -184,8 +170,9 @@ Image sources assets/img :
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">DISCLAIMER:</h5>
+                    <h5 class="text-uppercase">About our company</h5>
                     <p>
+                        DISCLAIMER:
                         Houzer is a fictitious brand created solely for the purpose of the
                         assessment of IN1010 module at City, University of London, UK. All products and
                         people associated with Houzer are also fictitious. Any resemblance to real
@@ -210,5 +197,31 @@ Image sources assets/img :
     <script src="assets/js/wow.min.js"></script><!-- Not sure about original source but i aqquired it from Lab 6 -->
 
     <script src="assets/js/scripts.js"></script>
+
+    <script src="assets/js/CalendarPicker.js"></script> <!--https://www.cssscript.com/calendar-date-picke/-->
+    <script src="assets/js/time_validation.js"></script> <!-- Own JS function with refactored code from form_validation.js -->
+
+
+
+    <!-- Base from: https://www.cssscript.com/calendar-date-picke/
+         but refactored and edited to conform site
+-->
+    <script> 
+        const nextYear = new Date().getFullYear() + 1;
+        const myCalender = new CalendarPicker('#myCalendarWrapper', {
+            // If max < min or min > max then the only available day will be today.
+            min: new Date(),
+            max: new Date(nextYear, 10) // NOTE: new Date(nextYear, 10) is "Sun Nov 01 <nextYear>"
+        });
+    
+        const currentToDateString = document.getElementById('current-datestring');
+        currentToDateString.value = myCalender.value.toDateString();
+    
+        myCalender.onValueChange((currentValue) => {
+            currentToDateString.value = currentValue.toDateString();
+    
+            console.log(`The current value of the calendar is: ${currentValue}`);
+        });
+    </script>
 </body>
 </html>

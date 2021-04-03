@@ -1,5 +1,5 @@
 /*
-*    Title: Lab 06 Sample Solution
+*    Title: Lab 06 Sample Solution (style.css)
 *    Author: City University Of London
 *    Date: 2021
 *    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
@@ -82,14 +82,14 @@ img {
 }
 
 ::-moz-selection {
-    background: #8542a0;
-    color: #fff;
+    background: rgb(58, 119, 105);
+    color: rgb(124, 249, 220);
     text-shadow: none;
 }
 
 ::selection {
-    background: #8542a0;
-    color: #fff;
+    background: rgb(58, 119, 105);
+    color: rgb(124, 249, 220);
     text-shadow: none;
 }
 
@@ -515,7 +515,7 @@ main form .fields .input-type-1 small {
     /* freely control positioning of error message */
     bottom: 0;
     left: 0;
-    color: #8542a0;
+    color: #ff0000;
     /* to show it is an error, set color to red */
     display: none;
     /* do not display message until JS says so */

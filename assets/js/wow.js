@@ -1,3 +1,12 @@
+/*
+*    Title: IN1010 Lab 06 Sample Solution (wow.js)
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: for different device conformation
+*    Changes: very minor changes or no changes 
+*/
+
 (function() {
   var Util, WeakMap,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };

@@ -1,3 +1,12 @@
+/*
+*    Title: IN1010 Lab 06 Sample Solution (scripts.js)
+*    Author: City University Of London
+*    Date: 2021
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+*    Usage: backstretch for pages
+*    Changes: very minor changes or no changes 
+*/
+
 
 function scroll_to(clicked_link, nav_height) {
 	var element_class = clicked_link.attr('href').replace('#', '.');
